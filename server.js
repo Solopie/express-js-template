@@ -12,7 +12,7 @@ app.use((req, res, next) => {
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", (req, res) => {
-    res.send("Hello World!");
+    res.send("Hello World!", { title: "Homepage" });
 });
 
 const server = app.listen(config.PORT, () => {
